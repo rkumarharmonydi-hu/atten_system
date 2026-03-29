@@ -1,0 +1,248 @@
+/*
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+/* Main Card 
+.container {
+    max-width: 650px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Headings 
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 5px #667eea;
+}
+
+/* Buttons Base 
+button {
+    padding: 10px 15px;
+    margin: 5px 5px 10px 0;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Different Button Colors 
+button:nth-of-type(1) {
+    background: #667eea; Login 
+}
+
+button:nth-of-type(2) {
+    background: #ff9800; /* Admin 
+}
+
+button:nth-of-type(3) {
+    background: #28a745; /* Check-in 
+}
+
+button:nth-of-type(4) {
+    background: #dc3545; /* Check-out 
+}
+
+button:nth-of-type(5) {
+    background: #17a2b8; /* My attendance 
+}
+
+/* Hover Effect 
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* List Styling 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: translateX(5px);
+} 
+
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, select {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 200px;
+}
+
+button {
+    padding: 10px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    cursor: pointer;
+} */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container (INCREASED WIDTH) */
+.container {
+    width: 90%;
+    max-width: 900px;   /* 🔥 Increased from 650px */
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.5);
+}
+
+/* Button Container */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Buttons */
+button {
+    flex: 1;
+    min-width: 140px;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button Colors */
+.login-btn { background: #667eea; }
+.admin-btn { background: #ff9800; }
+.checkin-btn { background: #28a745; }
+.checkout-btn { background: #dc3545; }
+.attendance-btn { background: #17a2b8; }
+
+/* Hover */
+button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* List Styling */
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    background: linear-gradient(135deg, #f5f7fa, #e4e8f0);
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #667eea;
+    transition: 0.3s;
+}
+
+li:hover {
+    transform: translateX(5px);
+}
+
+.signup-btn {
+    background: #bd42c1; 
+}

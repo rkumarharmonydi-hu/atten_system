@@ -1,0 +1,52 @@
+<!--
+<h2>HR Dashboard</h2>
+
+<input type="number" id="userId" placeholder="Enter User ID">
+<button onclick="getMonthlyReport()">Get Monthly Report</button>
+
+<ul id="data"></ul>
+
+<script src="app.js"></script>  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HR Dashboard</title>
+    <link rel="stylesheet" href="hr.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>HR Panel</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Attendance</li>
+            <li>Reports</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <div class="header">
+            <h2>Monthly Report</h2>
+        </div>
+
+        <div class="card">
+            <input type="number" id="userId" placeholder="Enter User ID">
+            <button onclick="getMonthlyReport()">Get Report</button>
+        </div>
+
+        <ul id="data"></ul>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!--
+<h2>Admin Dashboard</h2>
+
+<button onclick="getAllAttendance()">All Attendance</button>
+
+<ul id="data"></ul>
+
+<script src="app.js"></script> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Admin Panel</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Users</li>
+            <li>Attendance</li>
+            <li>Settings</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <div class="header">
+            <h2>All Attendance</h2>
+        </div>
+
+        <div class="card">
+            <button onclick="getAllAttendance()">Fetch Attendance</button>
+        </div>
+
+        <ul id="data"></ul>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

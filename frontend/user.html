@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="user.css">
+</head>
+
+<body>
+<div class="dashboard">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>User Panel</h2>
+        <ul>
+            <li>Home</li>
+            <li>Check-in</li>
+            <li>Check-out</li>
+            <li>My Attendance</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <div class="header">
+            <h2>Welcome User</h2>
+        </div>
+
+        <div class="card">
+            <button onclick="checkIn()">Check In</button>
+            <button onclick="checkOut()">Check Out</button>
+            <button onclick="getAttendance()">My Attendance</button>
+        </div>
+
+        <ul id="data"></ul>
+
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
