@@ -90,4 +90,14 @@ def all_leaves(
     current_user=Depends(require_role(["TL", "hr"])),
     db: Session = Depends(get_db)
 ):
-    return db.query(Leave).all()
+    leaves = db.query(Leave).all()
+    result = []
+    for leave in leaves:
+        result.append({
+            "id": leave.id,
+            "user_name": leave.user.username,   
+            "start_date": leave.start_date,
+            "end_date": leave.end_date,
+            "status": leave.status
+        })
+    return result

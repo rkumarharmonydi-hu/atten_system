@@ -36,3 +36,4 @@ class Leave(Base):
     end_date = Column(Date)   
     reason = Column(String)
     status = Column(String, default="Pending")
+    user=relationship("USer")
