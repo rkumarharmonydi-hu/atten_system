@@ -100,4 +100,4 @@ def all_leaves(
             "end_date": leave.end_date,
             "status": leave.status
         })
-    return result
+    return result 
