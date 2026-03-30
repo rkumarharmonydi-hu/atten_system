@@ -11,3 +11,4 @@ SessionLocal = sessionmaker(
 
 Base = declarative_base()     
 print("DATABASE URL:", DATABASE_URL)  
+

@@ -10,6 +10,7 @@ from sqlalchemy import extract
 from pydantic import BaseModel
 from typing import Optional
 from schemas import AttendanceUpdate
+
 router = APIRouter(prefix="/attendance", tags=["Attendance"])
 
 # DB dependency
@@ -198,7 +199,7 @@ def update_attendance(
     db: Session = Depends(get_db)
 ):
     #  Admin check
-    if current_user.role != "admin":
+    if current_user.role != ["admin","hr"]:
         raise HTTPException(
             status_code=403,
             detail="Only admin can update attendance"
