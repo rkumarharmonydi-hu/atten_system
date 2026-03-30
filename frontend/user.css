@@ -100,3 +100,22 @@ body {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
+
+.login-btn {
+    background: #E91E63;;
+    color: rgb(121, 36, 36);
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+}
+
+.signup-btn {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* 🔥 attractive */
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}

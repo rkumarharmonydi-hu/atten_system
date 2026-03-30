@@ -32,8 +32,7 @@ def apply_leave(
     db.commit()
     db.refresh(leave)
     return {"msg": "Leave applied successfully",
-            "leave_id": leave.id}
-
+            "user_name":current_user.username}
 
 # MY LEAVES
 @router.get("/my-leaves")
@@ -44,9 +43,7 @@ def my_leaves(
     leaves = db.query(Leave).filter(  
         Leave.user_id == current_user.id
     ).all()
-
     return leaves
-
 
 # APPROVE LEAVE
 @router.put("/approve/{leave_id}")
