@@ -4,6 +4,7 @@ from models import Leave
 from database import SessionLocal
 from dependencies import get_current_user, require_role
 from schemas import LeaveCreate
+from models import User 
 
 router = APIRouter(prefix="/leave", tags=["Leave"])
 
@@ -46,38 +47,33 @@ def my_leaves(
     return leaves
 
 # APPROVE LEAVE
-@router.put("/approve/{leave_id}")
+@router.put("/approve/{user_name}")
 def approve_leave(
-    leave_id: int,
-    current_user=Depends(require_role(["TL", "hr"])),  # optional fix
+    user_name: str,
+    current_user=Depends(require_role(["TL", "hr"])),  
     db: Session = Depends(get_db)
 ):
-    leave = db.query(Leave).filter(Leave.id == leave_id).first()
+    leave = db.query(Leave).join(Leave.user).filter(User.username == user_name).first()
 
     if not leave:
         raise HTTPException(status_code=404, detail="Leave not found")
 
     leave.status = "Approved"
     db.commit()
-
     return {"msg": "Leave approved"}
 
-
 # REJECT LEAVE
-@router.put("/reject/{leave_id}")
+@router.put("/reject/{user_name}")
 def reject_leave(
-    leave_id: int,
+    user_name: str,
     current_user=Depends(require_role(["TL", "hr"])),
     db: Session = Depends(get_db)
 ):
-    leave = db.query(Leave).filter(Leave.id == leave_id).first()
-
+    leave = db.query(Leave).join(Leave.user).filter(User.username == user_name).first()
     if not leave:
         raise HTTPException(status_code=404, detail="Leave not found")
-
     leave.status = "Rejected"
     db.commit()
-
     return {"msg": "Leave rejected"}
 
 
