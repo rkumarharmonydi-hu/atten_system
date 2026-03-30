@@ -110,7 +110,7 @@ body {
 }
 
 .signup-btn {
-    background: linear-gradient(135deg, #ff416c, #ff4b2b); /* 🔥 attractive */
+    background: linear-gradient(135deg, #ff416c, #ff4b2b); 
     color: white;
     padding: 12px;
     border-radius: 10px;
